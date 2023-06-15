@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      CRUD - {{loged_User}}
+    </ion-title>
+    <!-- <ion-button class="m-3" (click)="Logout()" slot="end"><ion-icon name="exit"></ion-icon></ion-button> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header >
+    <ion-toolbar>
+      <ion-title size="large" class="mt-2">CRUD</ion-title>
+
+      <ion-button class="m-3" (click)="Logout()" slot="end"><ion-icon name="exit"></ion-icon></ion-button>
+
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div id="container" style="padding-top: 350px; padding-left: 25px; padding-right: 25px;">
+    <h1>CRUD</h1>
+    
+
+    <ion-button (click)="onCreated()" shape="round">Create</ion-button>
+
+    <ion-button class="m-3" (click)="Logout()" slot="end"><ion-icon name="exit"></ion-icon></ion-button>
+    
+    <!-- <ion-button (click)="onReaded()" shape="round">Read</ion-button> -->
+    <!-- <ion-button (click)="onUpdated()" shape="round">Update</ion-button> -->
+    <!-- <ion-button (click)="onDeleted()" shape="round">Delete</ion-button> -->
+
+    <!-- <ion-button (click)="getData()" shape="round">GET</ion-button> -->
+
+    <!-- <h1>{{dataList.forEach( (row) => {row.keys})}}</h1> -->
+    <!-- <h1>{{dataList}}</h1> -->
+
+    <!-- <ion-item *ngFor="let item of dataList;">
+      <ion-label>{{ item.value }}</ion-label>
+    </ion-item> -->
+    <!-- <ion-row *ngFor="let item of number_of_texbox; let i=index"> -->
+    <!-- m *ngFor="let product of products | slice:0:limit" -->
+
+    <!-- <ion-item *ngFor="let key of keys;">
+        <b>key :- {{key}}</b> -->
+    <!-- <ion-item *ngFor="let key of keys;">
+          <h3>{{key}}</h3>
+          <ion-item *ngFor="let ite of dataList;">
+            <h3>{{ite}}</h3>
+          </ion-item>
+        </ion-item> -->
+    <!-- </ion-item> -->
+
+    <!-- <h1>{{dataList['-NXibYD5HbRqEKXbydzd'].name}}</h1> -->
+
+
+  
+    <!-- <div *ngFor="let key of dataList">
+      my key: {{key}}
+    </div> -->
+
+
+
+    <table class="table table-hover ">
+      <thead>
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">Name</th>
+          <th scope="col">Department</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of MydataList">
+          <!-- <th scope="row">{{row.id}}</th> -->
+          <!-- <td>{{row.id}}</td> -->
+          <td>{{row.name}}</td>
+          <td>{{row.department}}</td>
+          
+          <td>
+            <button type="button" class="btn btn-warning mx-2" (click)="onUpdated(row.id)" shape="round"><ion-icon name="create" style="color: white; font-size: x-large;"></ion-icon></button>
+            <button type="button" class="btn btn-danger " (click)="onDeleted(row.id)" shape="round"><ion-icon name="trash" style="color: white; font-size: x-large;"></ion-icon></button>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</ion-content>
